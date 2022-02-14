@@ -1,5 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject do
+    user = User.new(name: 'John Doe', email: 'john@mail.com', password: '123456', confirmed_at: Time.now)
+    Category.new(name: 'Accesories', icon: 'a logo', user: user)
+  end
+
+  before { subject.save }
+
+  it 'should be valid' do
+    expect(subject).to be_valid
+  end
+
+  it 'should have a name and an icon' do
+    subject.name = ''
+    subject.icon = ''
+
+    expect(subject).to_not be_valid
+  end
 end
