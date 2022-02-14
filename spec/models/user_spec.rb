@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it 'should have a name with a string type'
-  it 'should not be more than 250 characters'
+  subject { User.new(name: 'John Doe', email: 'john@mail.com', password: '123456', confirmed_at: Time.now) }
+
+  before { subject.save }
+
+  it 'should validate user' do
+    expect(subject).to be_valid
+    subject.name = ''
+    expect(subject).to_not be_valid
+  end
 end
