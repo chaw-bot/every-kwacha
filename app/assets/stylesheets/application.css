@@ -55,6 +55,7 @@ body {
 .nav {
   padding: 3%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .loginBtn {

@@ -12,6 +12,8 @@
       </div>
     </div>
   
+    <%= render partial: "devise/shared/notification"%>
+  
     <div class="textField mt-3 md-3">
       <div class="field">
         <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email", class: "form-control stuff" %>
