@@ -1,21 +1,24 @@
-<div>
-  <%= render partial: "partials/navbar", locals: {variable: 'ADD A NEW CATEGORY', path: categories_path } %>
-</div>
-
 <section class="login">
   <%= form_with model: @categories, url:categories_path, scope: :category, method: :post, data: { turbo: false }, class: "form" do |form| %>
-    <div class="textField mt-3 md-3">
-      <div class="field">
-        <%= f.text_field :name, placeholder: "Category name", autofocus: true, autocomplete: "name", class: "form-control stuff" %>
+    <div class="nav">
+      <%= link_to categories_path do %>
+        <i class="fa-solid fa-arrow-left back"></i>
+      <% end %>
+      <div>
+        ADD A NEW CATEGORY
       </div>
-
-      <div class="field">
-        <%= f.url_field :icon, placeholder: "Image URL", autofocus: true, autocomplete: "email", class: "form-control stuff" %>
+      <div class="actions">
+        <%= form.submit "ADD", class: "loginBtn" %>
       </div>
     </div>
+    <div class="textField mt-3 md-3">
+      <div class="field">
+        <%= form.text_field :name, placeholder: "Category name", autofocus: true, autocomplete: "name", class: "form-control stuff" %>
+      </div>
 
-    <div class="actions">
-      <%= f.submit "Add", class: "loginBtn" %>
+      <div class="field">
+        <%= form.url_field :icon, placeholder: "Image URL", autofocus: true, autocomplete: "email", class: "form-control stuff" %>
+      </div>
     </div>
   <% end %>
 </section>
