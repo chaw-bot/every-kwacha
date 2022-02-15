@@ -19,6 +19,7 @@ body,
 
 body {
   height: 100vh;
+  background-color: #ecedee
 }
 
 .splash,
@@ -37,13 +38,22 @@ body {
 
 .buttons,
 .forgot {
-  color: #828486;
   padding: 2%;
+}
+
+.buttons,
+.forgot,
+.catLink {
+  color: #828486;
 }
 
 .back,
 .nav,
-.loginBtn {
+.buttons:hover,
+.loginBtn,
+.notice,
+.alert,
+.addBtn {
   color: #ffff;
 }
 
@@ -58,6 +68,22 @@ body {
   align-items: center;
 }
 
+.notice,
+.alert {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.notice {
+  border: 2px solid rgb(0 128 0 / 0%);
+  background: #5fb523;
+}
+
+.alert {
+  border: 2px solid #f000;
+  background: #f01c09;
+}
+
 .loginBtn {
   border: none;
   background: none;
@@ -67,5 +93,28 @@ body {
 .stuff {
   border-left: none;
   border-right: none;
+}
+
+.icons {
+  width: 10%;
+  height: 10%;
+}
+
+.categories {
+  padding: 0 2% 0 2%;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+  column-gap: 2%;
+}
+
+.addButton {
+  align-self: center;
+  padding: 2%;
+  background-color: #5fb523;
+  border-radius: 6px;
 }
 
