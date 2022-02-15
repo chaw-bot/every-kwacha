@@ -1,0 +1,21 @@
+<div>
+  <%= render partial: "partials/navbar", locals: {variable: 'CATEGORIES', path: root_path } %>
+</div>
+<div class="addButton mt-3">
+  <%= link_to "ADD A NEW CATEGORY", new_category_path, class: "addBtn"%>
+</div>
+<section class="home">
+  <ul class="categories">
+    <% @categories.each do |category| %>
+      <li class="card mt-3 category">
+        <%= image_tag "#{category.icon}", class: "icons" %>
+        <div>
+          <h3>
+            <%= link_to category.name, category_path(category), class: "catLink" %>
+          </h3>
+          <p>Total: 0</p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>
