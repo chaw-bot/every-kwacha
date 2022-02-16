@@ -11,7 +11,7 @@
           <h3>
             <%= link_to category.name, category_records_path(category.id), class: "catLink" %>
           </h3>
-          <p>Total: K 0</p>
+          <p>Total: K <%= category.records.reduce(0) { |sum, item| sum + item.amount } %></p>
         </div>
       </li>
     <% end %>
