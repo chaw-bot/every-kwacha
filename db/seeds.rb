@@ -1,4 +1,4 @@
-user = User.create!(name: 'John Doe', email: 'john@mail.com', password: 'john123', confirmed_at: Time.now)
+user = User.create!(name: 'John Doe', email: 'john@mail.com', password: 'john123')
 
 icon1 = 'https://freedesignfile.com/upload/2020/09/Tasty-food-vector-icon.jpg'
 icon2 = 'https://thumbs.dreamstime.com/b/fashion-boutique-rgb-color-icon-women-stylish-garment-online-store-shopping-mall-category-female-clothes-shoes-accessories-187269539.jpg'
