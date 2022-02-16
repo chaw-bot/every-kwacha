@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Record, type: :model do
   subject do
-    user = User.new(name: 'John Doe', email: 'john@mail.com', password: '123456', confirmed_at: Time.now)
+    user = User.new(name: 'John Doe', email: 'john@mail.com', password: '123456')
     Record.new(name: 'Galaxy Watch', amount: 250, user: user)
   end
 
