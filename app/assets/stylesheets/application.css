@@ -32,7 +32,7 @@ body {
 
 .splash h1 {
   color: #434b54;
-  font-family: proxima nova bold;
+  font-family: 'proxima nova bold', sans-serif;
   font-style: italic;
 }
 
