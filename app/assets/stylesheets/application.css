@@ -43,7 +43,8 @@ body {
 
 .buttons,
 .forgot,
-.catLink {
+.catLink,
+.options {
   color: #828486;
 }
 
@@ -104,10 +105,14 @@ body {
   padding: 0 2% 0 2%;
 }
 
-.category {
+.category,
+.record {
   display: flex;
+  padding: 2%;
+}
+
+.category {
   flex-direction: row;
-  padding: 1%;
   column-gap: 2%;
 }
 
