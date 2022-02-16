@@ -1,5 +1,5 @@
 <section class="login">
-  <%= form_with model: @records, url:categories_path, scope: :category, method: :post, data: { turbo: false }, class: "form" do |form| %>
+  <%= form_with model: @category_records, url:category_records_path, scope: :record, method: :post, data: { turbo: false }, class: "form" do |form| %>
     <div class="nav">
       <%= link_to category_records_path do %>
         <i class="fa-solid fa-arrow-left back"></i>
