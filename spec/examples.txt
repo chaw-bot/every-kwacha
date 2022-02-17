@@ -1,0 +1,21 @@
+example_id                                    | status | run_time        |
+--------------------------------------------- | ------ | --------------- |
+./spec/features/categories_index_spec.rb[1:1] | passed | 4.27 seconds    |
+./spec/features/categories_index_spec.rb[1:2] | passed | 16.17 seconds   |
+./spec/features/categories_index_spec.rb[1:3] | passed | 4.06 seconds    |
+./spec/features/login_spec.rb[1:1]            | passed | 2.97 seconds    |
+./spec/features/login_spec.rb[1:2]            | passed | 2.76 seconds    |
+./spec/features/login_spec.rb[1:3]            | passed | 3.3 seconds     |
+./spec/features/login_spec.rb[1:4]            | passed | 2.45 seconds    |
+./spec/features/records_index_spec.rb[1:1]    | passed | 2.8 seconds     |
+./spec/features/records_index_spec.rb[1:2]    | passed | 3.92 seconds    |
+./spec/features/records_index_spec.rb[1:3]    | passed | 3.33 seconds    |
+./spec/models/category_spec.rb[1:1]           | passed | 0.06526 seconds |
+./spec/models/category_spec.rb[1:2]           | passed | 0.07357 seconds |
+./spec/models/record_spec.rb[1:1]             | passed | 0.01984 seconds |
+./spec/models/record_spec.rb[1:2]             | passed | 0.10835 seconds |
+./spec/models/user_spec.rb[1:1]               | passed | 0.26136 seconds |
+./spec/requests/categories_spec.rb[1:1:1]     | passed | 0.04163 seconds |
+./spec/requests/categories_spec.rb[1:1:2]     | passed | 0.03738 seconds |
+./spec/requests/records_spec.rb[1:1:1]        | passed | 0.04238 seconds |
+./spec/requests/records_spec.rb[1:1:2]        | passed | 0.0217 seconds  |

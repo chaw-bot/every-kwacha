@@ -1,15 +1,124 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+*,
+a:link {
+  text-decoration: none;
+}
+
+body,
+.splash,
+.regBtns {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  height: 100vh;
+  background-color: #ecedee;
+}
+
+.splash,
+.login {
+  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  height: 100%;
+}
+
+.splash h1 {
+  color: #434b54;
+  font-family: 'proxima nova bold', sans-serif;
+  font-style: italic;
+}
+
+.buttons,
+.forgot {
+  padding: 2%;
+}
+
+.buttons,
+.forgot,
+.catLink,
+.options {
+  color: #828486;
+}
+
+.back,
+.nav,
+.buttons:hover,
+.loginBtn,
+.notice,
+.alert,
+.addBtn {
+  color: #ffff;
+}
+
+.buttons:hover,
+.nav {
+  background-color: #3778c2;
+}
+
+.nav {
+  padding: 3%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice,
+.alert {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.notice {
+  border: 2px solid rgb(0 128 0 / 0%);
+  background: #5fb523;
+}
+
+.alert {
+  border: 2px solid #f000;
+  background: #f01c09;
+}
+
+.loginBtn {
+  border: none;
+  background: none;
+}
+
+.textField,
+.stuff {
+  border-left: none;
+  border-right: none;
+}
+
+.icons {
+  width: 20%;
+  height: 20%;
+}
+
+.categories {
+  padding: 0 2% 0 2%;
+}
+
+.category,
+.record {
+  display: flex;
+  padding: 2%;
+}
+
+.category {
+  flex-direction: row;
+  column-gap: 2%;
+}
+
+.addButton {
+  align-self: center;
+  padding: 2%;
+  background-color: #5fb523;
+  border-radius: 6px;
+}

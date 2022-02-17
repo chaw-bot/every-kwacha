@@ -1,0 +1,27 @@
+<section class="login">
+  <%= form_with model: @categories, url:categories_path, scope: :category, method: :post, data: { turbo: false }, class: "form" do |form| %>
+    <div class="nav">
+      <%= link_to categories_path do %>
+        <i class="fa-solid fa-arrow-left back"></i>
+      <% end %>
+      <div>
+        ADD A NEW CATEGORY
+      </div>
+      <div class="actions">
+        <%= form.submit "ADD", class: "loginBtn" %>
+      </div>
+    </div>
+  
+    <%= render partial: "devise/shared/notification" %>
+
+    <div class="textField mt-3 md-3">
+      <div class="field">
+        <%= form.text_field :name, placeholder: "Category name", autofocus: true, autocomplete: "name", class: "form-control stuff" %>
+      </div>
+
+      <div class="field">
+        <%= form.file_field :icon, placeholder: "Icon", class: "form-control stuff" %>
+      </div>
+    </div>
+  <% end %>
+</section>

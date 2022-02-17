@@ -1,0 +1,8 @@
+<section class="splash">
+  <h1>EveryKwacha💸</h1>
+  <%= render partial: "devise/shared/notification"%>
+  <div class="regBtns">
+    <%= link_to "LOG IN", new_user_session_path, data: {turbo: false}, class: "buttons" %>
+    <%= link_to "SIGN UP", new_user_registration_path, data: {turbo: false}, class: "buttons" %>
+  </div>
+</section>
