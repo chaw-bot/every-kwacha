@@ -1,0 +1,26 @@
+<div>
+  <%= render partial: "partials/navbar", locals: {variable: 'TRANSACTIONS', path: categories_path } %>
+</div>
+<div class="card flex-row justify-content-between align-items-baseline">
+  <h5 class="catLink category mt-3 mb-3">Total Amount: </h5>
+  <h5>K <%= @category.recent_records.reduce(0) { |sum, item| sum + item.amount } %></h5>
+</div>
+<section class="home">
+  <ul class="categories">
+    <% @category.recent_records.each do |record| %>
+      <li class="card mt-3 p-2 ">
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h3 class="catLink">
+            <%= record.name %>
+          </h3>
+          <h3>K <%= record.amount %></h3>
+        </div>
+        <hr/>
+        <%= record.created_at.strftime("%d %b %Y") %>
+      </li>
+    <% end %>
+  </ul>
+</section>
+<div class="addButton mt-2">
+  <%= link_to "ADD A NEW TRANSACTION", new_category_record_path, class: "addBtn"%>
+</div>

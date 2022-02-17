@@ -1,0 +1,22 @@
+<div>
+  <%= render partial: "partials/navbar", locals: {variable: 'CATEGORIES', path: root_path } %>
+</div>
+
+<section class="home">
+  <ul class="categories">
+    <% @categories.each do |category| %>
+      <li class="card mt-3 category">
+        <%= image_tag(category.icon, class: "icons") %>
+        <div>
+          <h3>
+            <%= link_to category.name, category_records_path(category.id), class: "catLink" %>
+          </h3>
+          <p>Total: K <%= category.records.reduce(0) { |sum, item| sum + item.amount } %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>
+<div class="addButton mt-2">
+  <%= link_to "ADD A NEW CATEGORY", new_category_path, class: "addBtn"%>
+</div>

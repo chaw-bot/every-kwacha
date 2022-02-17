@@ -1,0 +1,11 @@
+<nav class="nav">
+  <%= link_to path do %>
+        <i class="fa-solid fa-arrow-left back"></i>
+      <% end %>
+  <div> <%= variable %> </div>
+  <div>
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, data: {turbo: false}, class: "loginBtn" %>
+  </div>
+</nav>
+
+<%= render partial: "devise/shared/notification" %>

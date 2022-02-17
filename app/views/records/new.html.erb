@@ -1,0 +1,34 @@
+<section class="login">
+  <%= form_with model: @category_records, url:category_records_path, scope: :record, method: :post, data: { turbo: false }, class: "form" do |form| %>
+    <div class="nav">
+      <%= link_to category_records_path do %>
+        <i class="fa-solid fa-arrow-left back"></i>
+      <% end %>
+      <div>
+        ADD A NEW TRANSACTION
+      </div>
+      <div class="actions">
+        <%= form.submit "ADD", class: "loginBtn" %>
+      </div>
+    </div>
+    <div class="textField mt-3 md-3">
+      <div class="field">
+        <%= form.text_field :name, placeholder: "Transaction name", autofocus: true, autocomplete: "name", class: "form-control stuff" %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :amount, placeholder: "Amount", autofocus: true, autocomplete: "email", class: "form-control stuff" %>
+      </div>
+
+      <div class="general-checkbox-div card p-3 align-items-start">
+        <%= form.label :categories, 'Select Category/Categories', class: 'checkbox-main-label options' %><br>
+        <%= form.collection_check_boxes :category_ids, Category.all, :id, :name, class: '' do |cat| %>
+          <div class="checkbox-div">
+            <%= cat.check_box %>
+            <%= cat.label class: 'checkbox-label options' %><br>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</section>
