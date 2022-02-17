@@ -3,7 +3,7 @@
 A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ## Live Version
-Here is the [link]() to the live version
+Here is the [link](https://every-kwacha.herokuapp.com/) to the live version
 
 ## Screenshots
 
