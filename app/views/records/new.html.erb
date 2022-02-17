@@ -22,7 +22,7 @@
 
       <div class="general-checkbox-div card p-3 align-items-start">
         <%= form.label :categories, 'Select Category/Categories', class: 'checkbox-main-label options' %><br>
-        <%= form.collection_check_boxes :category_ids, Category.all, :id, :name, class: '' do |cat| %>
+        <%= form.collection_check_boxes :category_ids, Category.where(user_id: current_user.id), :id, :name, class: '' do |cat| %>
           <div class="checkbox-div">
             <%= cat.check_box %>
             <%= cat.label class: 'checkbox-label options' %><br>
