@@ -27,7 +27,8 @@ Here is the [link](https://every-kwacha.herokuapp.com/) to the live version
 - Get the link of the repository: [https://github.com/chaw-bot/every-kwacha](https://github.com/chaw-bot/every-kwacha)
 - Clone it as `git@github.com:chaw-bot/every-kwacha.git` on a Terminal
 - Usage
-- Run bundle install on a Terminal to get Gemfile dependencies.
+- Run `bundle install` on a Terminal to get Gemfile dependencies.
+- Run `rails db:create db:migrate` to create and migrate the database.
 - Start the server by running `rails s`
 
 ## Run test

@@ -1,21 +1,26 @@
 require 'rails_helper'
 
-RSpec.describe Category, type: :model do
-  subject do
-    user = User.new(name: 'John Doe', email: 'john@mail.com', password: '123456')
-    Category.new(name: 'Accesories', icon: 'a logo', user: user)
+RSpec.feature Category, type: :model do
+  background do
+    @user = User.create!(name: 'John Doe', email: 'john@mail.com', password: 'john123')
+
+    @category = @user.categories.create!(name: 'Food')
+
+    @category.icon.attach(
+      io: File.open(Rails.root.join('spec', 'fixtures', 'raggae.png')),
+      filename: 'raggae.png',
+      content_type: 'application/png'
+    )
+    @category.save!
   end
 
-  before { subject.save }
-
   it 'should be valid' do
-    expect(subject).to be_valid
+    expect(@category).to be_valid
   end
 
   it 'should have a name and an icon' do
-    subject.name = ''
-    subject.icon = ''
+    @category.name = ''
 
-    expect(subject).to_not be_valid
+    expect(@category).to_not be_valid
   end
 end
